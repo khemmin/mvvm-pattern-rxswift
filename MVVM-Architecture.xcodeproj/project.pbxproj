@@ -46,6 +46,10 @@
 		6F64F81C22A680860091B596 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F81B22A680860091B596 /* PostsViewModel.swift */; };
 		6F64F81E22A68C090091B596 /* PostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F81D22A68C090091B596 /* PostItemViewModel.swift */; };
 		6F64F82022A773770091B596 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F81F22A773770091B596 /* Application.swift */; };
+		6F64F82522AE45D20091B596 /* APIEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F82422AE45D20091B596 /* APIEncrypt.swift */; };
+		6F64F82722AE45E70091B596 /* RSAEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F82622AE45E70091B596 /* RSAEncrypt.swift */; };
+		6F64F82922AE45F70091B596 /* EncryptionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F82822AE45F70091B596 /* EncryptionHandler.swift */; };
+		6F64F82B22AE46070091B596 /* GenerateReqIDComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F64F82A22AE46070091B596 /* GenerateReqIDComponent.swift */; };
 		9453289DE8DFF4FBB0156B8F /* Pods_MVVM_Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0126CD643D2012EC27906EB /* Pods_MVVM_Architecture.framework */; };
 		B7B1347F7068580AA08B4315 /* Pods_MVVM_ArchitectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB5AD8EEC44149FD8E8034C /* Pods_MVVM_ArchitectureUITests.framework */; };
 		DFE1844F632BCECA220B0EB7 /* Pods_MVVM_ArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54ADB2E5D1473E14585D0B9 /* Pods_MVVM_ArchitectureTests.framework */; };
@@ -116,6 +120,10 @@
 		6F64F81B22A680860091B596 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		6F64F81D22A68C090091B596 /* PostItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemViewModel.swift; sourceTree = "<group>"; };
 		6F64F81F22A773770091B596 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		6F64F82422AE45D20091B596 /* APIEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEncrypt.swift; sourceTree = "<group>"; };
+		6F64F82622AE45E70091B596 /* RSAEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAEncrypt.swift; sourceTree = "<group>"; };
+		6F64F82822AE45F70091B596 /* EncryptionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionHandler.swift; sourceTree = "<group>"; };
+		6F64F82A22AE46070091B596 /* GenerateReqIDComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReqIDComponent.swift; sourceTree = "<group>"; };
 		B3767AFE61787F7F4DFAC9E8 /* Pods-MVVM-ArchitectureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-ArchitectureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-ArchitectureTests/Pods-MVVM-ArchitectureTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4AC9D66CCE4FAB93A170C13 /* Pods-MVVM-ArchitectureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-ArchitectureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-ArchitectureUITests/Pods-MVVM-ArchitectureUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7B06FDC04ED473ACCF252C9 /* Pods-MVVM-Architecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Architecture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Architecture/Pods-MVVM-Architecture.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 			children = (
 				6F64F69722A109610091B596 /* Application */,
 				6F64F69922A109900091B596 /* Domain */,
+				6F64F82222AE45840091B596 /* Utils */,
 				6F64F69822A109880091B596 /* Platform */,
 				6F64F69A22A1099F0091B596 /* Resources */,
 				6F64F69F22A10BB90091B596 /* Support */,
@@ -480,6 +489,25 @@
 			path = AllPosts;
 			sourceTree = "<group>";
 		};
+		6F64F82222AE45840091B596 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F64F82322AE45A10091B596 /* Encryption */,
+				6F64F82822AE45F70091B596 /* EncryptionHandler.swift */,
+				6F64F82A22AE46070091B596 /* GenerateReqIDComponent.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6F64F82322AE45A10091B596 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				6F64F82422AE45D20091B596 /* APIEncrypt.swift */,
+				6F64F82622AE45E70091B596 /* RSAEncrypt.swift */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
 		B61BE7E3C67CCF618F3B7FD4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +706,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM-Architecture/Pods-MVVM-Architecture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
@@ -686,12 +717,16 @@
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
@@ -700,6 +735,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -735,8 +771,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F64F82B22AE46070091B596 /* GenerateReqIDComponent.swift in Sources */,
 				6F64F66F22A0DF130091B596 /* MVVM_Architecture.xcdatamodeld in Sources */,
 				6F64F6B822A117D10091B596 /* PostsUseCaseProtocol.swift in Sources */,
+				6F64F82722AE45E70091B596 /* RSAEncrypt.swift in Sources */,
 				6F64F82022A773770091B596 /* Application.swift in Sources */,
 				6F64F6BD22A11A2D0091B596 /* Post.swift in Sources */,
 				6F64F7D622A6216A0091B596 /* RTask.swift in Sources */,
@@ -752,6 +790,7 @@
 				6F64F81222A67DAF0091B596 /* Observable+Ext.swift in Sources */,
 				6F64F80422A6799F0091B596 /* PostsNetwork.swift in Sources */,
 				6F64F80022A6794D0091B596 /* NetworkProvider.swift in Sources */,
+				6F64F82522AE45D20091B596 /* APIEncrypt.swift in Sources */,
 				6F64F81E22A68C090091B596 /* PostItemViewModel.swift in Sources */,
 				6F64F80622A67ADF0091B596 /* PostsUseCaseNetwork.swift in Sources */,
 				6F64F66722A0DF130091B596 /* AppDelegate.swift in Sources */,
@@ -762,6 +801,7 @@
 				6F64F7DC22A621E20091B596 /* Object.swift in Sources */,
 				6F64F80B22A67CCA0091B596 /* ViewModelType.swift in Sources */,
 				6F64F7EA22A622C80091B596 /* Task.swift in Sources */,
+				6F64F82922AE45F70091B596 /* EncryptionHandler.swift in Sources */,
 				6F64F7E022A622140091B596 /* RealmError.swift in Sources */,
 				6F64F81022A67D6B0091B596 /* ErrorTracker.swift in Sources */,
 				6F64F7E522A6227B0091B596 /* RealmTask.swift in Sources */,

@@ -14,6 +14,9 @@ pod 'RealmSwift'
 pod 'Realm'
 pod 'SwiftLint'
 pod 'SVProgressHUD'
+pod 'CryptoSwift'
+pod 'SwiftyRSA'
+pod 'AlamofireObjectMapper'
 
 
   # Pods for MVVM-Architecture
